@@ -1,0 +1,199 @@
+<!-- subtitle.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Same head as index.html -->
+    <title>Free Subtitle Generator | CreatorKit.AI</title>
+    <meta name="description" content="Create custom subtitles for your videos with our free online tool. Multiple styles available. No login required.">
+</head>
+<body class="bg-gray-50 dark:bg-slate-800 font-poppins">
+    <!-- Same header as index.html -->
+    
+    <main class="container mx-auto px-4 py-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-8">
+                <h1 class="text-3xl font-bold text-slate-800 dark:text-white mb-2">Subtitle Generator</h1>
+                <p class="text-slate-600 dark:text-slate-300">Create professional subtitles for your videos with customizable styles.</p>
+            </div>
+            
+            <!-- Banner Ad -->
+            <div class="w-full bg-white dark:bg-slate-700 py-2 mb-6 flex justify-center">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '9e0ead44870b53f102b8e20dd8341f09',
+                        'format' : 'iframe',
+                        'height' : 60,
+                        'width' : 468,
+                        'params' : {}
+                    };
+                    document.write('<scr' + 'ipt type="text/javascript" src="https://www.profitabledisplaynetwork.com/e9212e0a3476e6c7338986029f0a4c83/invoke.js"></scr' + 'ipt>');
+                </script>
+            </div>
+            
+            <div id="usage-limit-alert" class="hidden bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 dark:border-red-400 p-4 mb-6">
+                <div class="flex">
+                    <div class="flex-shrink-0">
+                        <svg class="h-5 w-5 text-red-500 dark:text-red-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="ml-3">
+                        <p class="text-sm text-red-700 dark:text-red-300">
+                            You've reached your maximum 3 subtitle uses this week. Please come back next Monday!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white dark:bg-slate-700 rounded-xl shadow-lg p-6 mb-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h2 class="text-xl font-semibold text-slate-800 dark:text-white mb-4">Input</h2>
+                        
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Add Text</label>
+                            <div class="flex rounded-md shadow-sm">
+                                <button id="paste-text-btn" class="inline-flex items-center px-4 py-2 border border-r-0 border-slate-300 dark:border-slate-600 rounded-l-md bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm">
+                                    Paste Text
+                                </button>
+                                <input type="text" id="subtitle-text" class="flex-1 min-w-0 block w-full px-3 py-2 rounded-none rounded-r-md border border-slate-300 dark:border-slate-600 focus:ring-indigo-500 focus:border-indigo-500 dark:focus:ring-indigo-400 dark:focus:border-indigo-400 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200" placeholder="Enter your text or paste from clipboard">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Or Upload Video</label>
+                            <div class="flex items-center justify-center w-full">
+                                <label for="video-upload" class="flex flex-col items-center justify-center w-full h-32 border-2 border-slate-300 dark:border-slate-600 border-dashed rounded-lg cursor-pointer bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700/50">
+                                    <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-slate-500 dark:text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                                        </svg>
+                                        <p class="mb-2 text-sm text-slate-500 dark:text-slate-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400">MP4, MOV (MAX. 10MB)</p>
+                                    </div>
+                                    <input id="video-upload" type="file" class="hidden" accept="video/*">
+                                </label>
+                            </div>
+                            <p class="mt-1 text-xs text-slate-500 dark:text-slate-400">Note: Video processing is simulated. Actual processing requires backend integration.</p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Subtitle Style</label>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                <div>
+                                    <input type="radio" id="style-default" name="subtitle-style" value="default" class="hidden peer" checked>
+                                    <label for="style-default" class="flex flex-col items-center p-3 border border-slate-300 dark:border-slate-600 rounded-lg cursor-pointer peer-checked:border-indigo-500 peer-checked:bg-indigo-50 dark:peer-checked:bg-indigo-900/30">
+                                        <div class="w-full h-16 bg-slate-800 mb-2 flex items-center justify-center text-white text-sm font-medium rounded">
+                                            Default
+                                        </div>
+                                        <div class="text-sm text-slate-800 dark:text-slate-200">Default</div>
+                                    </label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="style-mrbeast" name="subtitle-style" value="mrbeast" class="hidden peer">
+                                    <label for="style-mrbeast" class="flex flex-col items-center p-3 border border-slate-300 dark:border-slate-600 rounded-lg cursor-pointer peer-checked:border-indigo-500 peer-checked:bg-indigo-50 dark:peer-checked:bg-indigo-900/30">
+                                        <div class="w-full h-16 bg-slate-800 mb-2 flex items-center justify-center text-white text-sm font-medium rounded relative overflow-hidden">
+                                            <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                                </svg>
+                                            </div>
+                                            MrBeast
+                                        </div>
+                                        <div class="text-sm text-slate-800 dark:text-slate-200">Premium</div>
+                                    </label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="style-ghazi" name="subtitle-style" value="ghazi" class="hidden peer">
+                                    <label for="style-ghazi" class="flex flex-col items-center p-3 border border-slate-300 dark:border-slate-600 rounded-lg cursor-pointer peer-checked:border-indigo-500 peer-checked:bg-indigo-50 dark:peer-checked:bg-indigo-900/30">
+                                        <div class="w-full h-16 bg-slate-800 mb-2 flex items-center justify-center text-white text-sm font-medium rounded relative overflow-hidden">
+                                            <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                                </svg>
+                                            </div>
+                                            Ghazi
+                                        </div>
+                                        <div class="text-sm text-slate-800 dark:text-slate-200">Premium</div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button id="generate-subtitles-btn" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+                            Generate Subtitles
+                        </button>
+                    </div>
+                    
+                    <div>
+                        <h2 class="text-xl font-semibold text-slate-800 dark:text-white mb-4">Preview</h2>
+                        <div class="relative bg-black rounded-lg overflow-hidden mb-4" style="padding-bottom: 56.25%;">
+                            <div class="absolute inset-0 flex items-center justify-center text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div id="subtitle-preview" class="absolute bottom-0 left-0 right-0 p-4 text-center hidden">
+                                <div id="subtitle-text-display" class="inline-block px-4 py-2 text-white text-lg font-medium bg-black bg-opacity-70 rounded-lg">
+                                    Your subtitles will appear here
+                                </div>
+                            </div>
+                            <div class="absolute bottom-2 right-2 text-white text-xs bg-black bg-opacity-50 px-2 py-1 rounded">
+                                CreatorKit.AI
+                            </div>
+                        </div>
+                        
+                        <div id="subtitle-actions" class="hidden">
+                            <div class="mb-4">
+                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Subtitle Text</label>
+                                <textarea id="subtitle-output" rows="3" class="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200" readonly></textarea>
+                            </div>
+                            
+                            <button id="download-srt-btn" class="bg-slate-200 hover:bg-slate-300 dark:bg-slate-600 dark:hover:bg-slate-500 text-slate-800 dark:text-slate-200 font-medium py-2 px-4 rounded-lg transition duration-300 mr-2">
+                                Download SRT
+                            </button>
+                            <button id="copy-subtitles-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+                                Copy Text
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Inline Ad -->
+            <div class="w-full bg-white dark:bg-slate-700 py-4 my-6 flex justify-center">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '9e0ead44870b53f102b8e20dd8341f09',
+                        'format' : 'iframe',
+                        'height' : 250,
+                        'width' : 300,
+                        'params' : {}
+                    };
+                    document.write('<scr' + 'ipt type="text/javascript" src="https://www.profitabledisplaynetwork.com/e9212e0a3476e6c7338986029f0a4c83/invoke.js"></scr' + 'ipt>');
+                </script>
+            </div>
+            
+            <div class="bg-white dark:bg-slate-700 rounded-xl shadow-lg p-6">
+                <h2 class="text-xl font-semibold text-slate-800 dark:text-white mb-4">How to use the Subtitle Generator</h2>
+                <ol class="list-decimal list-inside space-y-2 text-slate-700 dark:text-slate-300">
+                    <li>Enter your text or upload a video (video processing is simulated)</li>
+                    <li>Select your preferred subtitle style</li>
+                    <li>Click "Generate Subtitles" to create your subtitles</li>
+                    <li>Preview how your subtitles will look on the video</li>
+                    <li>Copy the text or download the SRT file (simulated)</li>
+                </ol>
+                
+                <div class="mt-6 p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg border border-yellow-200 dark:border-yellow-800">
+                    <h3 class="font-medium text-yellow-800 dark:text-yellow-200 mb-2">Pro Tip</h3>
+                    <p class="text-yellow-700 dark:text-yellow-300">For best results, keep subtitles to 1-2 lines (about 35-40 characters per line) and display each for 2-4 seconds.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Same footer as index.html -->
+    
+    <script src="js/subtitle.js"></script>
+</body>
+  </html>
